@@ -18,7 +18,7 @@ safeCall(() => abc); // false
 
 Function.prototype.safeCall = function(...args) {
   try {
-    this(...args);
+    return this(...args);
   } catch (error) {
     return null;
   }
